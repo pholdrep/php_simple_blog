@@ -1,0 +1,65 @@
+A SIMPLE PHP BLOG
+
+
+HOW IT WORKS
+============
+
+Folder structure:
+    src/
+    -- files/
+    -- source/
+    -- article.php
+    -- index.php
+    -- info.php
+    -- style.css
+
+Copy the content of src/ folder to the web server folder
+
+To create a new article, go to 'source/' folder, and create a .html file named like:
+    YYYYMMDDHHMM.html (ex. 201911111030.html for 2019-11-11 10:30)
+
+Then, in the file, create the article title as:
+    <h2>Article Title</h2>
+
+and the article content written in HTML.
+And it's done.
+
+
+If it is necessary to insert an image to the article, put the image in 'files/' folder,
+and in the source txt file, insert this:
+
+    <img src="files/filename.jpeg" alt="simple image description">
+    <span class="img-description">image description</span>
+
+
+To customize the blog:
+    => edit the style.css
+    => edit the index.php/article.php files for structure
+    => edit the info.php to edit blog metadata
+       - blog title, author, description, and more
+
+
+SCREENSHOTS
+===========
+
+See screenshots folder.
+
+
+LICENSE
+=======
+
+    Copyright (C) 2019  Pedro Araújo (pedroaraujo.net)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
