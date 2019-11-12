@@ -29,6 +29,7 @@ $head_content = <<<EOF
 <meta name="author" content="$blog_author">
 <meta name="description" content="$meta_description">
 <meta name="keywords" content="$meta_keywords">
+<link rel="icon" href="files/favicon.ico" type="image/ico">
 <link type="text/css" rel="stylesheet" href="style.css">
 EOF;
 ?>

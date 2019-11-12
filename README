@@ -38,6 +38,9 @@ To customize the blog:
     => edit the info.php to edit blog metadata
        - blog title, author, description, and more
 
+To add/replace a favicon, insert a favicon.ico file in the files/ folder.
+If the favicon file as another name, change the file name and type in info.php file.
+
 
 SCREENSHOTS
 ===========
