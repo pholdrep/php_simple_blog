@@ -1,12 +1,25 @@
 <?php
 // filename: article.php
 
+// get the file
+$file = $_GET["src"];
+
+// get the article title from <h2> tag
+$file_content = file_get_contents("source/$file");
+$pattern = preg_quote("<h2>", '/');
+$pattern = "/^.*$pattern.*\$/m";
+if (preg_match_all($pattern, $file_content, $matches)) {
+	$article_title = implode("\n", $matches[0]);
+	$article_title = substr($article_title, 4, -5);
+} else {
+	$article_title = "";
+}
+
 // include blog info
 include("info.php");
 
 // if file exist, then open the article in the article.php page
 // if not, redirect page to index.php
-	$file = $_GET["src"];
 	if ($file == "" ) {
 		header("location: ./");
 	} elseif (!file_exists("source/$file")) {
@@ -17,7 +30,7 @@ include("info.php");
 <html lang="<?php echo $lang; ?>">
 <head>
 <?php echo "$head_content\n"; ?>
-<title><?php echo $blog_title; ?></title>
+<title><?php echo "$blog_title - $article_title"; ?></title>
 </head>
 <body>
 <header>
