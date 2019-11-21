@@ -2,7 +2,10 @@
 // filename: article.php
 
 // get the file
-$file = $_GET["src"];
+$filename = $_GET["id"];
+
+// add the .html extension the file name:
+$file = "$filename.html";
 
 // get the article title from <h2> tag
 $file_content = file_get_contents("source/$file");
@@ -38,7 +41,7 @@ include("info.php");
 <div id="blog-info">
 <?php echo "$blog_info\n"; ?>
 </div>
-<p>&lt;== <a href="./">go back</a></p>
+	<p>&lt;== <a href="./"><?php echo $go_back; ?></a></p>
 </header>
 <main>
 <?php
@@ -50,9 +53,9 @@ include("info.php");
 		$file_date = substr($file_date, 0, -9);
 
 		// print file content to html
-		echo "<div id='$file'>\n";
-		echo "<span class='entry-url'>Published: $file_date</span>\n";
-		echo "\n<div class='content'>\n";
+		echo "<div class='article' id='$filename'>";
+		echo "<span class='entry-url'>$published: $file_date</span>";
+		echo "<div class='content'>";
 		echo file_get_contents("source/$file");
 		echo "</div><!--content-->\n";
 		echo "</div>\n";

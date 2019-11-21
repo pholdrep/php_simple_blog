@@ -12,6 +12,7 @@ Folder structure:
     -- index.php
     -- info.php
     -- style.css
+    -- toc.php
 
 Copy the content of src/ folder to the web server folder
 
@@ -36,16 +37,32 @@ To customize the blog:
     => edit the style.css
     => edit the index.php/article.php files for structure
     => edit the info.php to edit blog metadata
-       - blog title, author, description, and more
+       - blog title, author, description, translation, and more
 
 To add/replace a favicon, insert a favicon.ico file in the files/ folder.
 If the favicon file as another name, change the file name and type in info.php file.
+
+
+FEATURES
+========
+
+This is a simple blog written in PHP, but has some "complex" features, like:
+
+    => homepage (index.php) only show 10 articles by default;
+        (This can be changed in the info.php)
+
+    => each article has is own page, using php sessions, and $_GET['id'];
+
+    => because the homepage lists only 10 articles (by default), there is
+        a toc.php page with all articles listed;
+
 
 
 SCREENSHOTS
 ===========
 
 See screenshots folder.
+
 
 
 LICENSE

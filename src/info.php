@@ -16,10 +16,20 @@ $meta_description = "a simple php blog";
 // head meta keywords
 $meta_keywords = "blog, php";
 
+// Max articles to show in the homepage
+$max_number_articles = "10";
+
 // blog info in html
 $blog_info = <<<HTML
 <p>a brief blog description</p>
 HTML;
+
+// translation
+$published = "published";
+$go_back = "go back";
+$toc_link = "view table of contents";
+$toc_title = "table of contents";
+$toc_message = "There all more articles. View all of them in the table of contents";
 
 // head
 $head_content = <<<EOF
