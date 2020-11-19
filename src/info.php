@@ -32,7 +32,7 @@ $toc_title = "table of contents";
 $toc_message = "There all more articles. View all of them in the table of contents";
 
 // head
-$head_content = <<<EOF
+$head_content = <<<HTML
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="title" content="$blog_title">
@@ -41,5 +41,5 @@ $head_content = <<<EOF
 <meta name="keywords" content="$meta_keywords">
 <link rel="icon" href="files/favicon.ico" type="image/ico">
 <link type="text/css" rel="stylesheet" href="style.css">
-EOF;
+HTML;
 ?>
